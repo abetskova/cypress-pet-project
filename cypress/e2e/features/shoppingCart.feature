@@ -17,5 +17,5 @@ Feature: Shopping cart functionality
 
     Scenario: Continue shopping from cart
         When I open the cart
-        And I click "Continue Shopping"
+        And I click Continue Shopping
         Then I should return to products page
