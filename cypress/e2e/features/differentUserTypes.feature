@@ -12,4 +12,4 @@ Feature: Different user types
 
     Scenario: Locked out user
         Given I try to login as "locked_out_user"
-        Then I should see "Sorry, this user has been locked out"
+        Then I should see "Sorry, this user has been locked out."
