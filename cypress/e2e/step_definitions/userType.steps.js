@@ -35,7 +35,3 @@ Then("I should experience UI issues", () => {
 Then("the site should load slowly", () => {
   userTypesPage.verifySlowLoading();
 });
-
-Then("I should see {string}", (expectedMessage) => {
-  userTypesPage.verifyLockedOutMessage(expectedMessage);
-});
