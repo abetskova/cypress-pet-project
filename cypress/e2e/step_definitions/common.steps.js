@@ -1,4 +1,4 @@
-import { Given } from "@badeball/cypress-cucumber-preprocessor";
+import { Given, Then } from "@badeball/cypress-cucumber-preprocessor";
 import loginPage from "../../support/pages/loginPage.js";
 
 Given("I am logged in as a standard user", () => {
@@ -6,4 +6,9 @@ Given("I am logged in as a standard user", () => {
   loginPage.login("standard_user", "secret_sauce");
   loginPage.clickLogin();
   cy.url().should("include", "/inventory.html");
+});
+
+Then("I should see {string}", (expectedText) => {
+  // Universal step for checking text on page
+  cy.contains(expectedText).should("be.visible");
 });

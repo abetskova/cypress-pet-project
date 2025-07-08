@@ -32,6 +32,6 @@ Then("I should see the products list", () => {
   cy.get(".inventory_item").should("have.length.greaterThan", 0);
 });
 
-Then("I should see error message {string}", (expectedMessage) => {
+Then("I should see login error message {string}", (expectedMessage) => {
   loginPage.verifyErrorMessage(expectedMessage);
 });
